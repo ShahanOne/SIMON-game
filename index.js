@@ -15,6 +15,16 @@ $(document).keydown(function() {  // ! means false
   }
 })
 
+$(document).click(function() {  // ! means false
+  if (!started) {
+    nextSequence();
+    $("h1").text("level " + level);
+
+    started = true;    // as per my understanding ,  started is now true,so the function wont run again
+
+  }
+})
+
 $(".btn").click(function() {
 
 
@@ -72,7 +82,7 @@ function checkAnswer(currentLevel) {
 
 function nextSequence() {
 
-userClickPattern = [];                              //IF confusion : gamepattern to to rakhna hi hai na subsequent levels ke liye bhi , lekin userclicked pattern baar baar reset hoga kyuki shuru se karna hota hai na click, simon game me yaad karna padta hai ki kya tha pattern
+userClickPattern = [];   //IF confusion : gamepattern to to rakhna hi hai na subsequent levels ke liye bhi , lekin userclicked pattern baar baar reset hoga kyuki shuru se karna hota hai na click, simon game me yaad karna padta hai ki kya tha pattern
 
 level++;
 
