@@ -15,15 +15,7 @@ $(document).keydown(function() {  // ! means false
   }
 })
 
-$(document).click(function() {  // ! means false
-  if (!started) {
-    nextSequence();
-    $("h1").text("level " + level);
 
-    started = true;    // as per my understanding ,  started is now true,so the function wont run again
-
-  }
-})
 
 $(".btn").click(function() {
 
